@@ -219,9 +219,9 @@ const links = [
               </div>
             </footer>
             <p className="text-center text-sm text-gray-500 my-10">
-              &copy; 2019-{new Date().getFullYear()}{" "}
+              &copy; 2023-{new Date().getFullYear()}{" "}
               <a href="#" className="hover:underline" target="_blank">
-                Themesberg
+                Admira
               </a>
               . All rights reserved.
             </p>
