@@ -1,50 +1,26 @@
-# React + TypeScript + Vite
+# Admira Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I have been using react with ts in this project
 
-Currently, two official plugins are available:
+## Live demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can access in the next link: [https://admira.vercel.app](https://admira.vercel.app)
 
-## Expanding the ESLint configuration
+## Characteristics of My Project
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Previously, I asked the question: ***How to present dynamic information??*** ...
+The answer was to use charts.
 
-- Configure the top-level `parserOptions` property like this:
+- The first step was understand the problem
+- The second steps was start the boilerplate:
+  - Initialize a vite project with react and ts
+  - config the router
+  - add tailwind and shadcn
+- Finally I began coding.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Screenshots
+![Google Analytics one](screenshots/1.png)
+![Google Analytics two](screenshots/2.png)
+![Google Ads](screenshots/3.png)
+![Google meta ads](screenshots/4.png)
+![Google CRM](screenshots/5.png)
