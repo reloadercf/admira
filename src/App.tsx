@@ -8,7 +8,7 @@ import * as getData from '@/lib/mockData'
 import DashboardLayout from '@/layouts/DashboardLayout'
 import Analytics from '@/pages/Analytics';
 import Ads from '@/pages/Ads';
-import Meta from '@/layouts/Meta';
+import Meta from '@/pages/Meta';
 import CRM from '@/pages/CRM';
 
 const router = createBrowserRouter([
@@ -35,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/meta",
         element: <Meta />,
+        loader:async()=>{
+          const data = await getData.dataMeta()
+          return data;
+        }
       },{
         path: "/crm",
         element: <CRM />,

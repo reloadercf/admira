@@ -54,3 +54,26 @@ export const dataCRM=()=> new Promise((res, rej)=>{
     });
   rej({reason:"Error we have a problem to get data from System CRM"});
 })
+
+export const dataMeta =()=> new Promise((res, rej)=>{
+  res({
+    "anuncios": [
+      {
+        "nombre": "Anuncio 1",
+        "alcance": 500,
+        "participación": 300,
+        "gastoPublicidad": 100,
+        "conversiones": 30
+      },
+      {
+        "nombre": "Anuncio 2",
+        "alcance": 750,
+        "participación": 500,
+        "gastoPublicidad": 150,
+        "conversiones": 45
+      }
+    ]
+  });
+
+  rej({reason:"Error we have a problem to get data from meta"})
+})
