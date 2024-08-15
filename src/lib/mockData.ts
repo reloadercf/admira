@@ -30,7 +30,7 @@ export const dataGoogleAds = ()=>new Promise((res, rej)=>{
         "impresiones": 1000,
         "clics": 150,
         "conversiones": 20,
-        "costo": 200
+        "costo": 200,
       },
       {
         "nombre": "Campaña 2",
