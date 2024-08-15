@@ -75,7 +75,6 @@ const links = [
                   <ul className="space-y-2 pb-2">
                     {links.map((navigationInfo) => (
                       <li key={navigationInfo.href}>
-                        {/* <span>{navigationInfo.name}</span> */}
                         <Link
                           to={navigationInfo.href}
                           className="text-base capitalize text-gray-900 font-normal rounded-lg flex items-center p-2 hover:bg-gray-100 group"

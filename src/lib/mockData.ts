@@ -43,3 +43,14 @@ export const dataGoogleAds = ()=>new Promise((res, rej)=>{
   })
   rej({reason:"Error we have a problem to get data from google ads"})
 })
+
+export const dataCRM=()=> new Promise((res, rej)=>{
+  res({
+      "leads": [
+        { "nombre": "Lead 1", "costoAdquisición": 200, "valorDeVida": 1000 },
+        { "nombre": "Lead 2", "costoAdquisición": 150, "valorDeVida": 750 }
+      ],
+      "tasaConversión": 0.08
+    });
+  rej({reason:"Error we have a problem to get data from System CRM"});
+})

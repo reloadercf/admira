@@ -9,7 +9,7 @@ import DashboardLayout from '@/layouts/DashboardLayout'
 import Analytics from '@/pages/Analytics';
 import Ads from '@/pages/Ads';
 import Meta from '@/layouts/Meta';
-import CRM from '@/layouts/CRM';
+import CRM from '@/pages/CRM';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +38,10 @@ const router = createBrowserRouter([
       },{
         path: "/crm",
         element: <CRM />,
+        loader:async()=>{
+          const data = await getData.dataCRM()
+          return data;
+        }
       },
     ],
   },
