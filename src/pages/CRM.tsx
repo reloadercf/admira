@@ -53,7 +53,6 @@ function BarChartComponent({info, rate}:{info:crmProps, rate:number}) {
   .filter(([key, values]) => typeof values === 'number')
   .map(([key, values]) => ({ metric: key, values, fill: `var(--color-${key})` })),[])
 
-  console.log(infoChart);
   return (
     <Card>
       <CardHeader>
@@ -103,6 +102,13 @@ function BarChartComponent({info, rate}:{info:crmProps, rate:number}) {
 
 export default function Ads() {
   const data = useLoaderData();
+
+  const error = console.error;
+  console.error = (...args: any) => {
+  if (/defaultProps/.test(args[0])) return;
+  error(...args);
+  }
+
   return (
     <div>
       <p className="text-4xl">
@@ -111,11 +117,11 @@ export default function Ads() {
       <AlertTitle className="mt-10">Leads data:</AlertTitle>
       <AlertTitle className='mt-10 flex gap-5'>
         <p className='flex items-center gap-1'>
-          <div className='bg-[#E23670] w-5 h-5'></div>
+          <span className='bg-[#E23670] w-5 h-5'></span>
           <span>Cost</span>
         </p>
         <p className='flex items-center gap-1'>
-          <div className='bg-[#2EB88A] w-5 h-5'></div>
+          <span className='bg-[#2EB88A] w-5 h-5'></span>
           <span>Life value</span>
         </p>
       </AlertTitle>

@@ -52,9 +52,9 @@ function DonutChart({info}:{info:infoChart}) {
   return (
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">
-        <h3 className='flex text-2xl items-center gap-1'>
+        <span className='flex text-2xl items-center gap-1'>
           Name of campaign:<CardTitle> {info.name}</CardTitle>
-        </h3>
+        </span>
         <CardDescription>
           Google Ads campaigns are essentially because allow you to organize your ads,
           set budgets, target specific audiences, and measure performance. 
@@ -121,6 +121,12 @@ function DonutChart({info}:{info:infoChart}) {
 
 export default function Ads() {
   const data = useLoaderData();
+  
+  const error = console.error;
+  console.error = (...args: any) => {
+  if (/defaultProps/.test(args[0])) return;
+  error(...args);
+  }
 
   return (
     <div>
@@ -130,15 +136,15 @@ export default function Ads() {
       <AlertTitle className="mt-10">Campaigns data:</AlertTitle>
       <AlertTitle className='mt-10 flex gap-5'>
         <p className='flex items-center gap-1'>
-          <div className='bg-[#E23670] w-5 h-5'></div>
+          <span className='bg-[#E23670] w-5 h-5'></span>
           <span>Cost</span>
         </p>
         <p className='flex items-center gap-1'>
-          <div className='bg-[#2662D9] w-5 h-5'></div>
+          <span className='bg-[#2662D9] w-5 h-5'></span>
           <span>Prints</span>
         </p>
         <p className='flex items-center gap-1'>
-          <div className='bg-[#2EB88A] w-5 h-5'></div>
+          <span className='bg-[#2EB88A] w-5 h-5'></span>
           <span>Conversions</span>
         </p>
       </AlertTitle>
